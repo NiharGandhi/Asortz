@@ -1,5 +1,5 @@
 dlib
 Flask
 numpy
-pencv_python_headless
+opencv-contrib-python
 
