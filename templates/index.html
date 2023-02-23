@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IR=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body bgcolor="2F303A">
+    <header class="border-b border-gray-300 py-4 px-4">
+        <div class="container mx-auto flex items-center justify-between relative">
+            <image src="./static/Logo.svg" width="300" class="px-3 mr-40"></image>
+            <nav>
+                <ul class="flex items-center">
+                    <li>
+                        <a href="{{ url_for('index') }}"
+                            class="px-2 py-0.5 mr-4 transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-white-400 bg-gradient-to-br from-purple-500 to-indigo-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                            Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('upload') }}"
+                            class="px-2 py-0.5 mr-4 transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-indigo-400 bg-gradient-to-br from-purple-500 to-indigo-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition">
+                            <image src="./static/Vector.svg" class="w-6 h-6 mr-2"></image>
+                            Asortz
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-2 py-0.5 mr-4 transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-indigo-400 bg-gradient-to-br from-purple-500 to-indigo-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition">SignUp</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero px-20 py-45">
+        <img src="./static/Ellipse 3.svg" alt="Ellipse" width="400" class="absolute right-0 flex px-20 inline-block">
+        <img src="./static/Ellipse 4.svg" alt="Ellipse" width="200" class="absolute bottom-0 left-0 flex  inline-block">
+        <div class="static container mx-auto flex items-center justify-between relative">
+            <h1
+                class="whitespace-pre-line text-left text-6xl relative inline-block bg-gradient-to-r from-pink-400 to-green-400 bg-clip-text text-white">
+                <span class="font-bold">Crop</span> People
+                from Group
+                Picture
+                <span class="font-bold">Instantly</span><span class='text-pink-400 font-bold'>.</span>
+                <p class="text-gray-300 whitespace-pre-line text-left text-xl 
+                            font-serif justfiy-items-left py-6">Cutting-edge technology for picture-perfect portraits
+                    - Asortz
+                </p>
+            </h1>
+            <img src="/static/Design.svg" alt="Design" class="flex items-end px-20 mt-2 ml-8" width="600">
+            <a href="{{ url_for('upload') }}"
+                class="absolute bottom-0 left-0 px-2 py-1 mr-4 font-serif font-light transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-green-400 bg-gradient-to-br from-green-500 to-blue-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition inline-block mb-8">
+                Get Started</a>
+        </div>
+        <img src="./static/Ellipse 2.svg" alt="Ellipse" width="200" class="absolute bottom-0 right-0 flex inline-block">
+    </section>
+</body>
+
+</html>

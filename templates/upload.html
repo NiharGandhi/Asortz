@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body bgcolor="#2F303A">
+    <header class="border-b border-gray-300 py-4 px-4">
+        <div class="container mx-auto flex items-center justify-between relative">
+            <image src="./static/Asortz.svg" height="74" width="150" class="px-3 mr-40"></image>
+            <nav>
+                <ul class="flex items-center">
+                    <li>
+                        <a href="{{ url_for('index') }}"
+                            class="px-2 py-1 mr-4 transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-indigo-400 bg-gradient-to-br from-purple-500 to-indigo-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            </svg>
+                            Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('upload') }}"
+                            class="px-2 py-1 mr-4 transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-white-400 bg-gradient-to-br from-purple-500 to-indigo-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition">
+                            <image src="./static/Vector.svg" class="w-6 h-6 mr-2"></image>
+                            Asortz
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-2 py-1 mr-4 transition hover:bg-gray-200 rounded-md active bg-graident-to-r border-t-2 border-indigo-400 bg-gradient-to-br from-purple-500 to-indigo-600 hover:from-green-600 hover:via-blue-700 hover:to-purple-700 text-white rounded-md flex md:inline-flex font-medium text-lg cursor-pointer hover:shadow-lg transition">
+                            SignUp
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero px-20 py-45">
+        <img src="./static/Ellipse 3.svg" alt="Ellipse" width="400" class="absolute right-0 flex px-20 inline-block">
+        <img src="./static/Ellipse 4 upload.svg" alt="Ellipse" width="200"
+            class="absolute bottom-0 left-0 flex  inline-block">
+        <img src="./static/Ellipse 2 upload.svg" alt="Ellipse" width="200"
+            class="absolute bottom-0 right-0 flex inline-block">
+    </section>
+    <div class="wrapper">
+        <div class="box">
+            <div class="input-bx">
+                <h2 class="upload-area-title">Upload File</h2>
+                <form id="file-upload-form" action="/uploader" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="upload" accept=".jpg, .png, .jpeg" hidden>
+                    <label for="upload" class="uploadlabel">
+                        <span><i class="fa fa-cloud-upload"></i></span>
+                        <p>Click To Upload</p>
+                    </label>
+                </form>
+            </div>
+
+            <div id="filewrapper">
+                <h3 class="uploaded">Uploaded Documents</h3>
+                <!-- <div class="showfilebox">
+                    <div class="left">
+                        <span class="filetype">jpg</span>
+                        <h3>Picture.jpg</h3>
+                    </div>
+                    <div class="right">
+                        <span>&#215;</span>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>
